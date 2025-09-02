@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Bangers, Quicksand, Roboto_Condensed } from "next/font/google";
 
 import "./globals.css";
@@ -38,6 +39,7 @@ export default function RootLayout({
         className={`${bangers.variable} ${quicksand.variable} ${robotoCondensed.variable} antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
