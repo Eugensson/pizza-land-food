@@ -1,10 +1,12 @@
+import { Banner } from "@/components/banner";
 import { PizzaList } from "@/components/pizza-list";
 
 const Home = () => {
   return (
-    <section>
+    <main>
+      <Banner />
       <PizzaList />
-    </section>
+    </main>
   );
 };
 

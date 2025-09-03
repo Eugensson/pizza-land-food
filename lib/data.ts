@@ -5,6 +5,63 @@ import {
   RiTwitterXFill,
 } from "react-icons/ri";
 
+export const parallaxItems = [
+  {
+    src: "/chilli-1.png",
+    width: 160,
+    height: 84,
+    alt: "Chilli Image",
+    className: "top-6 left-4",
+    factorX: 0.2,
+    factorY: 0.3,
+  },
+  {
+    src: "/chilli-2.png",
+    width: 130,
+    height: 84,
+    alt: "Chilli Image",
+    className: "top-16 -left-4",
+    factorX: 0.4,
+    factorY: 0.4,
+  },
+  {
+    src: "/garlic-1.png",
+    width: 84,
+    height: 72,
+    alt: "Garlic Image",
+    className: "top-80 -left-24",
+    factorX: 0.6,
+    factorY: 0.6,
+  },
+  {
+    src: "/garlic-2.png",
+    width: 100,
+    height: 72,
+    alt: "Garlic Image",
+    className: "top-[22rem] -left-8",
+    factorX: 0.3,
+    factorY: 0.6,
+  },
+  {
+    src: "/garlic-3.png",
+    width: 100,
+    height: 72,
+    alt: "Garlic Image",
+    className: "top-96 -left-20",
+    factorX: 0.4,
+    factorY: 1,
+  },
+  {
+    src: "/leaves.png",
+    width: 180,
+    height: 72,
+    alt: "Basilic leaves Image",
+    className: "top-96 left-12",
+    factorX: 0.2,
+    factorY: 0.2,
+  },
+];
+
 export const sizeOptions = [
   { label: "Small", value: "small", width: 60, height: 60 },
   { label: "Medium", value: "medium", width: 70, height: 70 },

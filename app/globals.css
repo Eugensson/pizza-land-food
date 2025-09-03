@@ -33,7 +33,7 @@ body {
 }
 
 .container {
-  @apply px-[1rem] mx-auto max-w-300 h-full;
+  @apply mx-auto max-w-320 h-full;
 }
 
 .btn {
