@@ -153,8 +153,8 @@ export const CheckoutDetails = ({ setModal }: CheckoutDetailsProps) => {
             </div>
 
             <div className="flex-1 h-full lg:max-w-[40%] flex flex-col justify-between pt-3 px-8 lg:p-0">
-              <div className="flex flex-col mb-4 p-4 h-full border rounded-lg">
-                <h3 className="text-base font-extrabold uppercase mb-4 border-b pb-4">
+              <div className="flex flex-col mb-4 p-4 h-full border border-gray-300 rounded-lg">
+                <h3 className="text-base font-extrabold uppercase mb-4 border-b border-gray-300 pb-4">
                   Your order
                 </h3>
                 <ul className="h-60 py-2 flex flex-col gap-4 overflow-y-scroll overflow-hidden scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-white font-semibold">

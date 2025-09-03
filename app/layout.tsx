@@ -10,6 +10,7 @@ import { CartProvider } from "@/context/cart-context";
 
 import "./globals.css";
 import { CartMobile } from "@/components/cart/cart-mobile";
+import { Footer } from "@/components/footer";
 
 const bangers = Bangers({
   subsets: ["latin"],
@@ -51,6 +52,7 @@ export default function RootLayout({
           <CartMobile />
           {children}
           <CartDesktop />
+          <Footer />
           <Analytics />
         </body>
       </html>

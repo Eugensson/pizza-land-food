@@ -64,7 +64,7 @@ body {
 
 .input,
 .textarea {
-  @apply outline-1 focus:outline-double focus:outline-orange rounded-lg border font-semibold placeholder:text-[#767676] placeholder:text-[15px] placeholder:font-semibold transition-all duration-100;
+  @apply outline-1 outline-gray-300 focus:outline-double focus:outline-orange rounded-lg font-semibold placeholder:text-[#767676] placeholder:text-[15px] placeholder:font-semibold transition-all duration-100;
 }
 
 .gradient {
