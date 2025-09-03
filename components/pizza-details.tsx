@@ -1,12 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import { Topping } from "@/components/topping";
 import { SizeSelection } from "@/components/size-selection";
 import { CrustSelection } from "@/components/crust-selection";
 
+import { CartContext } from "@/context/cart-context";
 import { AdditionalToppingType, CrustType, PizzaType, SizeType } from "@/types";
 
 interface PizzaDetailsProps {
@@ -15,6 +16,7 @@ interface PizzaDetailsProps {
 }
 
 export const PizzaDetails = ({ pizza, onClose }: PizzaDetailsProps) => {
+  const [price, setPrice] = useState(0);
   const [size, setSize] = useState<SizeType>("small");
   const [crust, setCrust] = useState<CrustType>("traditional");
   const [additionalToppings, setAdditionalToppings] = useState<
@@ -22,7 +24,6 @@ export const PizzaDetails = ({ pizza, onClose }: PizzaDetailsProps) => {
   >([]);
   const [additionalToppingsPrice, setAdditionalToppingsPrice] =
     useState<number>(0);
-  const [price, setPrice] = useState(0);
 
   useEffect(() => {
     const basePrice: number =
@@ -53,7 +54,23 @@ export const PizzaDetails = ({ pizza, onClose }: PizzaDetailsProps) => {
     }
   }, [additionalToppings]);
 
+  const context = useContext(CartContext);
+
+  if (!context)
+    throw new Error("CartContext must be used within a CartProvider");
+
+  const { addToCart } = context;
+
   const onSubmit = () => {
+    addToCart(
+      pizza.id,
+      pizza.image,
+      pizza.name,
+      price,
+      additionalToppings,
+      size,
+      crust
+    );
     onClose();
   };
 

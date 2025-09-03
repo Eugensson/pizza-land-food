@@ -3,8 +3,13 @@ import { Analytics } from "@vercel/analytics/next";
 import { Bangers, Quicksand, Roboto_Condensed } from "next/font/google";
 
 import { Header } from "@/components/header";
+import { CartDesktop } from "@/components/cart/cart-desktop";
+import { CartMobileButton } from "@/components/cart/cart-mobile-button";
+
+import { CartProvider } from "@/context/cart-context";
 
 import "./globals.css";
+import { CartMobile } from "@/components/cart/cart-mobile";
 
 const bangers = Bangers({
   subsets: ["latin"],
@@ -36,14 +41,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${bangers.variable} ${quicksand.variable} ${robotoCondensed.variable} antialiased`}
-      >
-        <Header />
-        {children}
-        <Analytics />
-      </body>
-    </html>
+    <CartProvider>
+      <html lang="en">
+        <body
+          className={`${bangers.variable} ${quicksand.variable} ${robotoCondensed.variable} antialiased`}
+        >
+          <Header />
+          <CartMobileButton />
+          <CartMobile />
+          {children}
+          <CartDesktop />
+          <Analytics />
+        </body>
+      </html>
+    </CartProvider>
   );
 }

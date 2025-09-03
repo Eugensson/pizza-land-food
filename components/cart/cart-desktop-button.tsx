@@ -1,12 +1,17 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useContext } from "react";
+
+import { CartContext } from "@/context/cart-context";
 
 export const CartDesktopButton = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const context = useContext(CartContext);
 
-  const totalAmount = 0;
+  if (!context)
+    throw new Error("CartContext must be used within a CartProvider");
+
+  const { isOpen, setIsOpen, totalAmount } = context;
 
   return (
     <div

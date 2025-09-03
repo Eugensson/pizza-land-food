@@ -10,7 +10,7 @@ import { parallaxItems } from "@/lib/data";
 
 export const Banner = () => {
   return (
-    <section className="pt-40 lg:pt-16 lg:min-h-192 bg-primary bg-pattern">
+    <section className="pt-40 xl:pt-30 lg:min-h-192 bg-primary bg-pattern">
       <div className="container flex items-center justify-center">
         <MouseParallaxContainer
           globalFactorX={0.4}

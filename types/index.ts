@@ -22,10 +22,10 @@ export type CrustType = "traditional" | "thin";
 export type CartItemType = {
   id: string;
   image: string;
-  title: string;
+  name: string;
   price: number;
-  additionalTopping: AdditionalToppingType;
+  additionalToppings: AdditionalToppingType[];
   size: SizeType;
-  dough: CrustType;
+  crust: CrustType;
   amount: number;
 };
