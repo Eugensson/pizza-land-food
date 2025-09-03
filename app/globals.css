@@ -32,12 +32,16 @@ body {
   @apply font-secondary text-black;
 }
 
+.container {
+  @apply px-[1rem] mx-auto max-w-300 h-full;
+}
+
 .btn {
-  @apply rounded-xl font-semibold transition-all;
+  @apply rounded-lg font-semibold cursor-pointer hover:scale-105 transition-all duration-300;
 }
 
 .btn-sm {
-  @apply py-3 px-6;
+  @apply py-3 px-5 text-sm;
 }
 
 .btn-lg {

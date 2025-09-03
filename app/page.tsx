@@ -1,5 +1,11 @@
+import { PizzaList } from "@/components/pizza-list";
+
 const Home = () => {
-  return <div className="bg-primary bg-pattern h-screen"></div>;
+  return (
+    <section>
+      <PizzaList />
+    </section>
+  );
 };
 
 export default Home;
